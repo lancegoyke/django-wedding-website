@@ -129,17 +129,17 @@ STATICFILES_DIRS = (
 )
 
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Bride and Groom'
+BRIDE_AND_GROOM = 'Lance and Allison'
 # base address for all emails
-DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
+DEFAULT_WEDDING_EMAIL = 'lancegoyke@gmail.com'
 # the address your emails (save the dates/invites/etc.) will come from
 DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' <' + DEFAULT_WEDDING_EMAIL + '>' # change to 'address@domain.tld'
 # the default reply-to of your emails
 DEFAULT_WEDDING_REPLY_EMAIL = DEFAULT_WEDDING_EMAIL # change to 'address@domain.tld'
 # the location of your wedding
-WEDDING_LOCATION = 'North Pole, USA'
+WEDDING_LOCATION = 'Lafayette, Indiana, USA'
 # the date of your wedding
-WEDDING_DATE = 'January 1st, 1969'
+WEDDING_DATE = 'September 4th, 2023'
 
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
