@@ -34,6 +34,9 @@ class Party(models.Model):
     is_attending = models.BooleanField(default=None, null=True)
     comments = models.TextField(null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = "Parties"
+
     def __str__(self):
         return 'Party: {}'.format(self.name)
 
