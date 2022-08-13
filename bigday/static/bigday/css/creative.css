@@ -4,6 +4,43 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@font-face {
+    font-family: "Inspiration";
+    src: url("../font/Inspiration-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Cedarville";
+    src: url("../font/CedarvilleCursive-Regular.ttf");
+}
+
+:root {
+    --measure: 60ch;
+    --dark-color: hsl(35deg 67% 4% / 50%);
+    --darker-color: hsl(35deg 67% 4% / 70%);
+    --darkest-color: hsl(35deg 67% 4%);
+    --accent-color: hsl(122deg 84% 27%);
+}
+
+* {
+    box-sizing: border-box;
+    max-inline-size: var(--measure);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+section,
+article,
+footer {
+    max-inline-size: none;
+}
+
 html,
 body {
     width: 100%;
@@ -12,12 +49,12 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
 }
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: var(--accent-color);
     border-width: 3px;
 }
 
@@ -26,7 +63,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: var(--accent-color);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -43,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 p {
@@ -54,7 +91,7 @@ p {
 
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: var(--accent-color);
 }
 
 .bg-primary a {
@@ -67,8 +104,12 @@ p {
     background-color: #222;
 }
 
+.bg-info {
+    background-color: rgb(213 178 126 / 20%);
+}
+
 .text-faded {
-    color: rgba(255,255,255,.7);
+    color: rgba(255, 255, 255, .7);
 }
 
 section {
@@ -84,8 +125,8 @@ aside {
 }
 
 .navbar-default {
-    border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    border-color: rgba(34, 34, 34, .05);
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -94,9 +135,13 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    color: var(--accent-color);
+}
+
+.navbar-brand {
+    font-family: "Inspiration", cursive;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -104,38 +149,38 @@ aside {
     color: #eb3812;
 }
 
-.navbar-default .nav > li>a,
+.navbar-default .nav>li>a,
 .navbar-default .nav>li>a:focus {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: rgb(28,56,81);
+    color: var(--darker-color);
 }
 
-.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: var(--accent-color);
 }
 
-.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: var(--accent-color) !important;
     background-color: transparent;
 }
 
-.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;
 }
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(28,56,81,.3);
+        border-color: rgba(28, 56, 81, .3);
         background-color: transparent;
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(28,56,81,.7);
+        color: var(--dark-color);
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -143,24 +188,24 @@ aside {
         color: #fff;
     }
 
-    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(28,56,81,.7);
+        color: var(--dark-color);
     }
 
-    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: rgb(28,56,81);
+        color: var(--darker-color);
     }
 
     .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
+        border-color: rgba(34, 34, 34, .05);
         background-color: #fff;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #f05f40;
+        color: var(--accent-color);
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -168,14 +213,14 @@ aside {
         color: #eb3812;
     }
 
-    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a,
     .navbar-default.affix .nav>li>a:focus {
-        color: rgb(28,56,81);
+        color: var(--darker-color);
     }
 
-    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: var(--accent-color);
     }
 }
 
@@ -184,16 +229,30 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: rgb(28,56,81);
+    color: var(--darker-color);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #main-header {
-    background-image: url('../images/wedding-selfie-better.jpg');
+    background-image: url('../images/lance-allison-lake-run.jpg');
+    opacity: 70%;
+}
+
+#second-header {
+    background-image: url('../images/allisons-silent-proposal.jpg');
+}
+
+#third-header {
+    background-image: url('../images/opal-pen.jpg');
+}
+
+#fourth-header {
+    background-image: url('../images/ring-all.jpg');
 }
 
 header .header-content {
@@ -206,9 +265,9 @@ header .header-content {
 header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
-    text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
+    font-family: "Inspiration", cursive;
+    color: var(--darkest-color);
 }
 
 header .header-content .header-content-inner hr {
@@ -219,11 +278,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 22px;
     font-weight: 400;
-    color: rgba(255,255,255);
-}
-
-#second-header {
-    background-image: url('../images/chapmans-peak-view.jpg');
+    color: rgba(255, 255, 255);
 }
 
 @media(min-width:768px) {
@@ -305,7 +360,7 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: rgb(119 164 72 / 90%);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -322,7 +377,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -354,10 +409,10 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    color: var(--accent-color);
 }
 
-.no-gutter > [class*=col-] {
+.no-gutter>[class*=col-] {
     padding-right: 0;
     padding-left: 0;
 }
@@ -376,7 +431,7 @@ header .header-content .header-content-inner p {
 .btn-default.focus,
 .btn-default:active,
 .btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.open>.dropdown-toggle.btn-default {
     border-color: #ededed;
     color: #222;
     background-color: #f2f2f2;
@@ -384,7 +439,7 @@ header .header-content .header-content-inner p {
 
 .btn-default:active,
 .btn-default.active,
-.open > .dropdown-toggle.btn-default {
+.open>.dropdown-toggle.btn-default {
     background-image: none;
 }
 
@@ -416,9 +471,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: var(--accent-color);
     color: #fff;
-    background-color: #f05f40;
+    background-color: var(--accent-color);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -429,7 +484,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.focus,
 .btn-primary:active,
 .btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
+.open>.dropdown-toggle.btn-primary {
     border-color: #ed431f;
     color: #fff;
     background-color: #ee4b28;
@@ -437,7 +492,7 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary:active,
 .btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
+.open>.dropdown-toggle.btn-primary {
     background-image: none;
 }
 
@@ -459,12 +514,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
 }
 
 .btn-primary .badge {
-    color: #f05f40;
+    color: var(--accent-color);
     background-color: #fff;
 }
 
@@ -472,7 +527,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -510,4 +565,25 @@ body {
 #footer {
     background-color: #222;
     padding-bottom: 30px;
+}
+
+.text-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: content-box;
+    margin-inline: auto;
+    max-inline-size: var(--measure);
+}
+
+.text-stack>* {
+    margin-block: 0;
+}
+
+.text-stack>*+* {
+    margin-block-start: var(--space, 1.5rem);
+}
+
+.text-stack>table {
+    max-inline-size: unset;
 }
