@@ -129,7 +129,7 @@ STATICFILES_DIRS = (
 )
 
 # This is used in a few places where the names of the couple are used
-BRIDE_AND_GROOM = 'Lance and Allison'
+BRIDE_AND_GROOM = 'Lance & Allison'
 # base address for all emails
 DEFAULT_WEDDING_EMAIL = 'lancegoyke@gmail.com'
 # the address your emails (save the dates/invites/etc.) will come from
