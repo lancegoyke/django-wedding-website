@@ -16,13 +16,17 @@
 
 :root {
     --measure: 60ch;
-    --dark-color: hsl(35deg 67% 4% / 50%);
-    --darker-color: hsl(35deg 67% 4% / 70%);
+    --dark-color: hsl(35deg 67% 20%);
+    --darker-color: hsl(35deg 67% 13%);
     --darkest-color: hsl(35deg 67% 4%);
-    --accent-color: hsl(122deg 84% 27%);
+    --light-accent-color: hsl(122deg 84% 39%);
+    --accent-color: hsl(122deg 84% 25%);
+    --dark-accent-color: hsl(122deg 84% 10%);
+    --gray-color: hsl(0deg 0% 70%);
 }
 
 * {
+    font-size: 16px;
     box-sizing: border-box;
     max-inline-size: var(--measure);
     margin-left: auto;
@@ -71,7 +75,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #eb3812;
+    color: var(--accent-color);
 }
 
 h1,
@@ -101,7 +105,11 @@ p {
 
 .bg-dark {
     color: #fff;
-    background-color: #222;
+    background-color: var(--darkest-color);
+}
+
+.bg-dark a {
+    color: var(--light-accent-color);
 }
 
 .bg-info {
@@ -146,7 +154,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: var(--accent-color);
 }
 
 .navbar-default .nav>li>a,
@@ -185,7 +193,7 @@ aside {
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
+        color: var(--darker-color);
     }
 
     .navbar-default .nav>li>a,
@@ -210,7 +218,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+        color: var(--accent-color);
     }
 
     .navbar-default.affix .nav>li>a,
@@ -241,6 +249,7 @@ header {
 #main-header {
     background-image: url('../images/lance-allison-lake-run.jpg');
     opacity: 70%;
+    margin-top: 51px;
 }
 
 #second-header {
@@ -268,6 +277,7 @@ header .header-content .header-content-inner h1 {
     font-weight: 700;
     font-family: "Inspiration", cursive;
     color: var(--darkest-color);
+    text-shadow: -1px 2px 0px white, 0px 0px 10px white;
 }
 
 header .header-content .header-content-inner hr {
@@ -563,8 +573,27 @@ body {
 }
 
 #footer {
-    background-color: #222;
     padding-bottom: 30px;
+    color: var(--gray-color);
+}
+
+#footer p,
+#footer a {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.font-size\:small {
+    font-size: .85rem;
+}
+
+.font-size\:medium {
+    font-size: 1rem;
+}
+
+.font-size\:large {
+    font-size: 1.5rem;
 }
 
 .text-stack {
@@ -574,6 +603,8 @@ body {
     box-sizing: content-box;
     margin-inline: auto;
     max-inline-size: var(--measure);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .text-stack>* {
@@ -586,4 +617,15 @@ body {
 
 .text-stack>table {
     max-inline-size: unset;
+}
+
+.text-stack>h1,
+.text-stack>h2,
+.text-stack>h3,
+.text-stack>h4,
+.text-stack>h5,
+.text-stack>h6,
+.text-stack>ul {
+    margin-left: unset;
+    margin-right: unset;
 }
