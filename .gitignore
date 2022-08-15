@@ -7,7 +7,9 @@ localsettings.py
 static_root
 _working/
 data/
-static/
+/static/
+bigday/static/bigday/images/czue
+bigday/static/bigday/images/full res
 guests/static/save-the-date/images/archive/
 .DS_Store
 .venv/
