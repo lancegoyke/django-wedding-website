@@ -12,6 +12,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     get_env_var("IP_ADDRESS"),
+    get_env_var("DOMAIN"),
     'localhost',
 ]
 
