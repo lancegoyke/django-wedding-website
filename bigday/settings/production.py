@@ -30,5 +30,9 @@ DATABASES = {
     }
 }
 
-# change to a real email backend in production
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django_ses.SESBackend'
+# Set the following environment variables
+# AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY
+# AWS_SES_REGION_NAME
+# AWS_SES_REGION_ENDPOINT
