@@ -87,6 +87,14 @@ h6 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-size: inherit;
+}
+
 p {
     margin-bottom: 20px;
     font-size: 16px;
