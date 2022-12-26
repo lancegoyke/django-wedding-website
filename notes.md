@@ -4,7 +4,7 @@ Username: lance
 Password: magical-hobby
 
 
-Server is hosted on AWS EC2
+Server is hosted on AWS EC2. [See notes.](https://docs.google.com/document/d/1Jg7w1vZw3HWMZ8RpLeIi2nxvI2HWu22r0MUVxUPdurE/edit#)
 
 users:
 - ubuntu (root)
