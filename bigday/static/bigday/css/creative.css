@@ -647,3 +647,9 @@ body {
     margin-left: unset;
     margin-right: unset;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+}
