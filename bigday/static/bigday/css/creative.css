@@ -653,3 +653,17 @@ body {
     align-items: center;
     max-width: 300px;
 }
+
+.hover-opacity {
+    -webkit-transition: opacity .35s;
+    -moz-transition: opacity .35s;
+    transition: opacity .35s;
+    opacity: 0.8;
+}
+
+.hover-opacity:hover {
+    -webkit-transition: opacity .35s;
+    -moz-transition: opacity .35s;
+    transition: opacity .35s;
+    opacity: 1;
+}
